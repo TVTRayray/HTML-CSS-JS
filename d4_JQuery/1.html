@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript">
+        // jQuery的变量默认以$打头
+        $(function () {//相当于window.onload = function(){}
+           var $btnobj = $("#btnid"); //表示按id查询标签对象
+           $btnobj.click(function () {
+               alert(/jquery 单击事件/)
+           })
+        });
+        $(function () {
+            $(                         //核心函数实现添加标签功能
+                "<button id=\"bt\">" +
+                "hello" +
+                " </button>"
+            ).appendTo("body");
+
+            alert($("button").length); //按照标签名查询对象
+            alert($(document.getElementById("btnid")));
+        });
+
+
+    </script>
+</head>
+<body>
+
+<button id="btnid">hello world</button>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!--
+    1.
+    格式化表单内容，使用table和form结合
+    数据如果要发给服务器，需要给每个标签加上name属性
+    对于单选、复选、下拉框，要正确提交数据需要声明它们的value属性
+
+    2.
+    GET请求：
+            浏览器地址栏会显示参数
+            有长度限制
+            不安全
+    POST请求：
+             浏览器只有action属性值
+             相对于GET请求安全
+             理论上没有长度限制
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form>
+    <table>
+        <tr>
+            <td>
+                这位男酮 学，你好！
+            </td>
+        </tr>
+        <tr>
+            <td>
+                请输入你滴名汁
+            </td>
+            <td>
+                <input  type="text" value="name"  >
+            </td>
+        </tr>
+        <tr>
+            <td>
+                请输入你的密码儿
+            </td>
+            <td>
+                <input value="passwd" type="password">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                请确认你的密码儿
+            </td>
+            <td>
+                <input type="password">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                你的性别：
+            </td>
+            <td>
+                <input type="radio" name="sex" />男
+                <input type="radio" name="sex" checked="checked"/>男酮
+            </td>
+        </tr>
+        <tr>
+            <td>
+                兴趣爱好捏：
+            </td>
+            <td>
+                <input type="checkbox" checked="checked"> 大司马
+                <input type="checkbox"> 韩金龙
+                <input type="checkbox"> 韩金轮
+            </td>
+        </tr>
+        <tr>
+            <td>
+                出生地：
+            </td>
+            <td>
+                <select>
+                    <option>--请选择--</option>
+                    <option>安徽蚌埠</option>
+                    <option selected="selected">广东芜湖</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                锐评一下嘉心糖：
+            </td>
+            <td>
+                <textarea rows="10" cols="50"></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="reset" value="点爷重置" name="reset" />
+            </td>
+            <td>
+                <input type="submit"  value="点爷提交"/>
+            </td>
+            <td>
+                <input type="file"  />
+            </td>
+            <td>
+                <input type="hidden" name="hidden" value="爷躲起来了" />
+            </td>
+        </tr>
+    </table>
+
+</form>
+
+</body>
+</html>

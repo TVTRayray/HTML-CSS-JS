@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        function onclickFun() { //静态注册onclick
+            alert(/静态/)
+        }
+        window.onload = function () {//需要使用onload来获取对象，然后再调用对象的对应事件方法
+            var obj = document.getElementById("2");
+            obj.onclick = function () {
+                alert(/动态/)
+            }
+        }
+
+    </script>
+</head>
+<body>
+
+<!--静态-->
+<button onclick="onclickFun()">1</button>
+
+<!--动态-->
+<button id = "2">2</button>
+
+</body>
+</html>

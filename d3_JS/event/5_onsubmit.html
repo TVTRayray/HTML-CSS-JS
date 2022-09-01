@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        function onsubmitFun(){
+            alert(/静态submit/)
+        }
+        window.onload = function () {//需要使用onload来获取对象，然后再调用对象的对应事件方法
+            var obj = document.getElementById("2");
+            obj.onsubmit = function () {
+                alert(/动态submit/)
+            }
+
+        }
+    </script>
+</head>
+<body>
+    <form method="post" onsubmit="onsubmitFun()">
+        <input type="text">
+        <button type="submit">1</button>
+    </form>
+<br>
+    <form method="post" id="2">
+        <input type="text">
+        <button type="submit">2</button>
+    </form>
+</body>
+</html>

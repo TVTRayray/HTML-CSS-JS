@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        function onchangeFun(){
+            alert(/静态change/)
+        }
+        window.onload = function () {//需要使用onload来获取对象，然后再调用对象的对应事件方法
+            var obj = document.getElementById("2");
+            obj.onchange = function () {
+                console.log(/动态change/)
+            }
+
+        }
+
+    </script>
+</head>
+<body>
+出生地：
+
+<select onchange="onchangeFun()">
+  <option>--请选择--</option>
+  <option>安徽蚌埠</option>
+  <option selected="selected">广东芜湖</option>
+</select>
+<br>
+出生地：
+<select onchange="onchangeFun()" id="2">
+    <option>--请选择--</option>
+    <option>安徽蚌埠</option>
+    <option selected="selected">广东芜湖</option>
+</select>
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!--
+    表单
+    form
+    input标签：
+             type属性：当前表单内容的形式
+                                        text:文本属性
+                                        value:默认值
+                                        passwd:密码输入框，默认不会明文显示
+                                        radio：单选框，使用name对其进行分组操作，checked="checked"表示默认选中
+                                        checkbox：复选框，checked="checked"表示默认选中
+                                        select：下拉列表框
+                                                        option：下拉框中的选项，selected="selected"表示默认选中
+                                        reset：重置，value表示该按钮的文本
+                                        submit：提交，value表示该按钮的文本
+                                        file：文件上传域
+                                        hidden：是隐藏域，发送的文件不需要展示给用户，但是仍然会发给服务器
+                                        textarea：表示多行文本输入框
+                                                        rows：表示可以显示几行的高度
+                                                        cols：表示可以显示的字符宽度
+
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body bgcolor="#5f9ea0">
+  <form >
+    这位男酮 学，你好！<br>
+      请输入你滴名汁<input type="text" value="韩金龙" ><br>
+      请输入你的密码儿<input type="password"><br>
+      请确认你的密码儿<input type="password"><br>
+      你的性别： <input type="radio" name="sex" />男
+               <input type="radio" name="sex" checked="checked"/>男酮
+      兴趣爱好捏：<input type="checkbox"> 大司马
+       <input type="checkbox"> 韩金龙
+       <input type="checkbox"> 韩金轮<br>
+      出生地： <select>
+            <option>--请选择--</option>
+            <option>安徽蚌埠</option>
+            <option selected="selected">广东芜湖</option>
+            </select><br>
+      锐评一下嘉心糖： <br><textarea rows="10" cols="50"></textarea><br>
+      <input type="reset" value="点爷重置" name="reset" /><br>
+      <input type="submit"  value="点爷提交"/>
+      <input type="file"  />
+      <input type="hidden" name="hidden" value="爷躲起来了" />
+
+  </form>
+</body>
+</html>

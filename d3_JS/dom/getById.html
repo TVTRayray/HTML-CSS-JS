@@ -1,0 +1,45 @@
+<!--
+    验证用户名是否正确，必须是数字、字母、下划线构成的5-12位字符串
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        function yanzheng() {
+            // Dom对象内容：
+            // id          id
+            // tagName     标签名
+            // parentNode  父亲
+            // children    孩子节点
+            // innerHTML   标签中间的内容
+            var user = document.getElementById("username");
+            // console.log(user.value);//获取值
+            var usertext = user.value;
+            var patt = /^\w{5,12}$/;
+            if (patt.test(usertext)){
+                alert("合法")
+            }
+            else{
+                alert("非法")
+            }
+        }
+
+
+    </script>
+</head>
+<body>
+
+用户
+<input type="text" id="username">
+
+<button onclick="yanzheng()">验证</button>
+
+<br>
+
+密码
+<input type="password" id="2">
+
+</body>
+</html>

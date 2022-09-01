@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        function onblurFun(){
+            console.log(/静态/)
+        }
+        window.onload = function () {//需要使用onload来获取对象，然后再调用对象的对应事件方法
+            var obj = document.getElementById("2");
+            obj.onblur = function () {
+                console.log(/动态/)
+            }
+        }
+
+    </script>
+</head>
+<body>
+
+用户
+<input type="text" onblur="onblurFun()">
+
+<br>
+
+密码
+<input type="password" id="2">
+
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!--声明-->
+
+<!--        标签学习                                                     -->
+<!--                1.标签不分大小写                                      -->
+<!--                2.标签有自己的属性：①基本属性 bgcolor="red"            -->
+<!--                                 ②时间属性 onclick="alert(/xss/)"   -->
+<!--                3.标签分为单标签和双标签                               -->
+
+
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+    <meta charset="UTF-8">
+    <title>demo1</title>
+</head>
+
+<body  bgcolor="#5f9ea0">
+<!--
+    1.
+    bgcolor背景颜色属性
+    onclick表示单机事件
+    alert() 是js的一个警告框，可以接受任何参数。参数就是警告框的函数信息
+-->
+    hello<br/>
+<hr color="red"/>
+<!--
+    2.
+    <hr/>水平线
+    <br/>换行
+-->
+<button onclick="alert('送地狱火')">按钮<br></button>
+<!--
+    3.
+    font字体标签，faced代表字体属性
+-->
+<font face="黑体">我是个伞兵,嘟嘟嘟</font>
+
+<!--
+    4.
+    标题标签1-6
+    align是对齐属性：left(默认),right,center
+-->
+<h1 align="left">1级标题</h1>
+<h2 align="right">2级标题</h2>
+<h3 align="center">3级标题</h3>
+<h4>4级标题</h4>
+<h5>5级标题</h5>
+<h6>6级标题</h6>
+
+<!--
+    5.
+    超链接标签 <a></a>
+    href:设置跳转地址
+    target属性设置哪个目标进行跳转
+        _self 表示当前页面跳转
+        _blank 表示新页面跳转
+-->
+    <a href="https://www.baidu.com" target="_blank">我是个超链接_blank，点爷</a>
+
+<!--
+    6.
+    无序列表标签 <ul></ul> type="none" 属性代表不要前面的小点
+    有序列表标签 <ol></ol>
+
+-->
+
+    <ul type="none">
+        <li>jojo</li>
+        <li>dio</li>
+        <li>ACDC</li>
+        <li>KAZI</li>
+    </ul>
+
+    <ol>
+        <li>jojo</li>
+        <li>dio</li>
+        <li>ACDC</li>
+        <li>KAZI</li>
+    </ol>
+    
+    
+<!--    
+    7.
+    图片标签 img
+    相对路径：
+            . 当前文件所在的目录
+            .. 上一级目录
+    绝对路径:
+            正确格式：http://ip:port/
+
+-->
+    <img src="cat.png" width="665" height="853" border="1" alt="🐱不见了┗|｀O′|┛ 嗷~~">
+</body>
+</html>
